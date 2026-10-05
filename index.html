@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Prático Digital — manuais simples e práticos para organizar sua vida financeira, vender pelo Instagram e criar uma renda extra.">
+<title>Prático Digital | Conhecimento que vira resultado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f8fc;--ink:#111827;--muted:#667085;--brand:#635bff;--brand2:#8b5cf6;--card:#fff;--line:#e7e9f0;--dark:#17152a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:800;letter-spacing:-.7px}.logo span{color:var(--brand)}
+nav{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600;color:#4b5563}
+.navbtn{background:var(--ink);color:#fff;padding:11px 17px;border-radius:10px}
+.hero{padding:88px 0 70px;background:radial-gradient(circle at 85% 20%,#e7e3ff 0,transparent 32%),linear-gradient(180deg,#fff 0,#f7f8fc 100%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+.eyebrow{display:inline-block;background:#eeecff;color:#5147d9;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:18px}
+h1{font-size:clamp(40px,6vw,67px);line-height:1.02;letter-spacing:-3px;max-width:720px}
+.hero p{font-size:18px;color:var(--muted);max-width:620px;margin:24px 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:11px;font-weight:700;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}.btn.secondary{background:#fff}
+.cover-stack{position:relative;height:390px}
+.book{position:absolute;width:230px;height:300px;border-radius:14px;padding:24px;color:#fff;box-shadow:0 25px 50px rgba(31,27,73,.2);display:flex;flex-direction:column;justify-content:space-between}
+.book.one{background:linear-gradient(145deg,#635bff,#8b5cf6);right:15px;top:15px;transform:rotate(7deg)}
+.book.two{background:linear-gradient(145deg,#111827,#374151);left:55px;top:55px;transform:rotate(-5deg)}
+.book.three{background:linear-gradient(145deg,#0f766e,#14b8a6);right:115px;bottom:0;transform:rotate(2deg)}
+.book small{font-weight:700;opacity:.8}.book strong{font-size:27px;line-height:1.05;letter-spacing:-1px}.book em{font-style:normal;font-size:11px;opacity:.8}
+section{padding:78px 0}
+.section-head{max-width:680px;margin-bottom:38px}.section-head h2{font-size:38px;letter-spacing:-1.5px;line-height:1.1}.section-head p{color:var(--muted);margin-top:12px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:0 8px 30px rgba(17,24,39,.04)}
+.product-cover{height:180px;border-radius:13px;color:#fff;padding:20px;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:22px}
+.fin{background:linear-gradient(135deg,#635bff,#9b8cff)}.insta{background:linear-gradient(135deg,#111827,#4b5563)}.renda{background:linear-gradient(135deg,#0f766e,#22c55e)}
+.product-cover strong{font-size:25px;line-height:1.05;max-width:210px}.product-cover small{font-weight:700}
+.card h3{font-size:20px;margin-bottom:8px}.card p{color:var(--muted);font-size:14px;min-height:68px}.price{font-size:28px;font-weight:800;margin:16px 0}.price small{font-size:12px;color:var(--muted);font-weight:500}
+.card .btn{width:100%}
+.bundle{background:var(--dark);color:#fff;border-radius:25px;padding:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.bundle h2{font-size:40px;line-height:1.05;letter-spacing:-1.5px}.bundle p{color:#c7c9d3;margin:15px 0 22px}.bundle ul{list-style:none;color:#e5e7eb;display:grid;gap:9px;font-size:14px}.bundle li:before{content:"✓";color:#a5b4fc;font-weight:800;margin-right:9px}
+.bundle-price{text-align:center;background:#25223b;border:1px solid #3a3656;padding:28px;border-radius:18px}.bundle-price .old{text-decoration:line-through;color:#9ca3af}.bundle-price strong{display:block;font-size:44px;margin:3px 0 15px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:25px;background:#fff;border:1px solid var(--line);border-radius:16px}.icon{font-size:24px;margin-bottom:12px}.feature h3{font-size:17px;margin-bottom:5px}.feature p{font-size:14px;color:var(--muted)}
+.faq{max-width:800px}.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:10px}.faq summary{font-weight:700;cursor:pointer}.faq p{color:var(--muted);font-size:14px;padding-top:12px}
+footer{background:#111827;color:#d1d5db;padding:42px 0;margin-top:20px}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.foot strong{color:#fff}.foot p{font-size:13px}
+@media(max-width:800px){nav{display:none}.hero{padding-top:55px}.hero-grid,.bundle{grid-template-columns:1fr}.cover-stack{height:330px}.products,.features{grid-template-columns:1fr}.bundle{padding:30px}.bundle h2{font-size:32px}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a class="logo" href="#">Prático<span>Digital</span></a>
+<nav><a href="#produtos">Manuais</a><a href="#kit">Kit completo</a><a href="#faq">Dúvidas</a><a class="navbtn" href="#produtos">Comprar</a></nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<span class="eyebrow">Manuais digitais práticos</span>
+<h1>Conhecimento simples para colocar em prática.</h1>
+<p>Guias diretos para quem quer organizar o dinheiro, melhorar o Instagram e criar uma nova fonte de renda — sem complicação.</p>
+<div class="actions"><a class="btn primary" href="#produtos">Conhecer os manuais</a><a class="btn secondary" href="#kit">Ver o kit completo</a></div>
+</div>
+<div class="cover-stack" aria-label="Três manuais digitais">
+<div class="book one"><small>PRÁTICO DIGITAL</small><strong>Organize Seu Dinheiro</strong><em>Manual prático</em></div>
+<div class="book two"><small>PRÁTICO DIGITAL</small><strong>Instagram que Vende</strong><em>Manual prático</em></div>
+<div class="book three"><small>PRÁTICO DIGITAL</small><strong>Renda Extra do Zero</strong><em>Manual prático</em></div>
+</div>
+</div>
+</section>
+
+<section id="produtos">
+<div class="container">
+<div class="section-head"><h2>Escolha por onde começar</h2><p>Três manuais digitais criados para sair da teoria e transformar ideias em ações.</p></div>
+<div class="products">
+<article class="card">
+<div class="product-cover fin"><small>MANUAL 01</small><strong>Organize Seu Dinheiro</strong></div>
+<h3>Organize Seu Dinheiro</h3><p>Um passo a passo para entender seus gastos, montar um orçamento, sair das dívidas e criar metas financeiras.</p>
+<div class="price">R$ 19,90 <small>pagamento único</small></div>
+<a class="btn primary" href="#comprar">Comprar agora</a>
+</article>
+<article class="card">
+<div class="product-cover insta"><small>MANUAL 02</small><strong>Instagram que Vende</strong></div>
+<h3>Instagram que Vende</h3><p>Estratégias simples de conteúdo, posicionamento, Reels, Stories e ofertas para pequenos negócios.</p>
+<div class="price">R$ 19,90 <small>pagamento único</small></div>
+<a class="btn primary" href="#comprar">Comprar agora</a>
+</article>
+<article class="card">
+<div class="product-cover renda"><small>MANUAL 03</small><strong>Renda Extra do Zero</strong></div>
+<h3>Renda Extra do Zero</h3><p>Um guia para encontrar ideias, testar oportunidades, definir preços e conquistar os primeiros clientes.</p>
+<div class="price">R$ 19,90 <small>pagamento único</small></div>
+<a class="btn primary" href="#comprar">Comprar agora</a>
+</article>
+</div>
+</div>
+</section>
+
+<section id="kit">
+<div class="container">
+<div class="bundle">
+<div><h2>Leve os 3 manuais e economize.</h2><p>Tenha o pacote completo para cuidar das suas finanças, melhorar sua presença digital e explorar novas fontes de renda.</p><ul><li>3 manuais digitais em PDF</li><li>66 páginas de conteúdo prático</li><li>Checklists, planos e exercícios</li><li>Acesso imediato após a compra</li></ul></div>
+<div class="bundle-price"><div class="old">De R$ 59,70</div><strong>R$ 39,90</strong><a class="btn" style="background:#fff;color:#111827;width:100%" href="#comprar">Quero o kit completo</a></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head"><h2>Feito para quem quer começar</h2><p>Sem linguagem complicada. Sem excesso de teoria. Com orientação para você agir.</p></div>
+<div class="features">
+<div class="feature"><div class="icon">📘</div><h3>Conteúdo direto</h3><p>Informações organizadas em etapas para facilitar a leitura e a aplicação.</p></div>
+<div class="feature"><div class="icon">✅</div><h3>Aplicação prática</h3><p>Checklists, desafios, planos e ferramentas para transformar conhecimento em ação.</p></div>
+<div class="feature"><div class="icon">⚡</div><h3>Acesso digital</h3><p>Você recebe os materiais em PDF e pode estudar pelo celular, tablet ou computador.</p></div>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+<div class="section-head"><h2>Dúvidas frequentes</h2></div>
+<div class="faq">
+<details><summary>Como recebo o manual?</summary><p>Após a confirmação do pagamento, o cliente recebe as instruções para acessar o arquivo digital. Nesta versão do site, o botão de compra está preparado para receber o seu link real de checkout.</p></details>
+<details><summary>Os materiais são físicos?</summary><p>Não. Os produtos são digitais, em formato PDF.</p></details>
+<details><summary>Posso ler pelo celular?</summary><p>Sim. Os PDFs foram preparados para leitura em celular, tablet e computador.</p></details>
+<details><summary>Posso comprar os três juntos?</summary><p>Sim. O kit completo reúne os três manuais por um preço promocional.</p></details>
+</div>
+</div>
+</section>
+
+<section id="comprar" style="padding-top:25px">
+<div class="container" style="text-align:center">
+<div class="section-head" style="margin:0 auto"><h2>Seu próximo passo começa aqui.</h2><p>Escolha um manual ou leve o kit completo. Os links de pagamento podem ser configurados nesta área.</p></div>
+<div class="actions" style="justify-content:center;margin-top:22px"><a class="btn primary" href="#produtos">Ver produtos</a><a class="btn secondary" href="#kit">Comprar kit</a></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container foot"><div><strong>Prático Digital</strong><p>Conhecimento que vira resultado.</p></div><p>© 2026 Prático Digital. Todos os direitos reservados.</p></div>
+</footer>
+</body>
+</html>
